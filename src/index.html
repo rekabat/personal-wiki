@@ -7,16 +7,43 @@
         <!-- <script type="module" src="snarkdown.js"></script> -->
     </head>
     <body>
-        <div id="content-left">
-            <div id="wiki-title"></div>
-            <div id="wiki-links">
-                <ul>
-                    <li onclick="navHome()">Home</li>
-                    <li onclick="navAllLinks()">All Pages</li>
-                </ul>
+        <div id=content-container>
+            <div id="content-left">
+                <div id="wiki-title"></div>
+                <div id="wiki-links">
+                    <div id="wiki-links-basics">
+                        <ul>
+                            <li onclick="navHome()">Home</li>
+                            <li onclick="navAllLinks()">All Snacks</li>
+                            <li onclick="newSnack()">New Snack</li>
+                            <li onclick="saveWiki()">Save Wiki</li>
+                        </ul>
+                    </div>
+                    <div id="wiki-links-pinned"></div>
+                </div>
             </div>
+            <div id="content-center">
+                <div id="snack-container">
+                    <div id="snack-title"></div>
+                    <button id="snack-edit" onclick="editSnack()">Edit</button>
+                    <button id="snack-save" onclick="saveSnack()">Save</button>
+                    <button id="snack-pin-toggle"></button>
+                    <div id="snack-content"></div>
+                </div>
+            </div>
+            <div id="content-right"></div>
         </div>
-        <div id="content-right"></div>
+        <div id="banquet" wiki-title="My Wiki" home-snack="0" current-snack="0">
+            <pre class="snack">
+                {"title": "Welcome", "content": "Your own personal wiki!"}
+            </pre>
+            <pre class="snack">
+                {"title": "Favorite Food", "pinned": true, "content": "Cheetos, *burritos*, and ice cream"}
+            </pre>
+            <pre class="snack">
+                {"title": "Todo List", "content": "cook, *shop*, learn to dance<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Play catch with dad<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Eat chips"}
+            </pre>
+        </div>
     </body>
     <script src="./scripts.js"></script>
 </html>

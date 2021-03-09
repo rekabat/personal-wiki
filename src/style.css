@@ -2,29 +2,72 @@ body {
     background-color: #383c4a;
     color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
-a {
+a, .snack-link {
     color: #5294e2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, .snack-link:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #7c818c;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 1px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #000;
+}
+
+button:focus {
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#banquet {
+    display: none;
+}
+
+#content-container {
+    display: flex;
+    padding: 0 2em;
 }
 
 #content-left {
-    position: fixed;
-    overflow: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 249px;
-    border-right: 1px solid #7c818c;
+    padding-right: 1em;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 14em;
+    flex: 0 0 14em;
+    order: 1;
+}
+
+#content-center {
+    justify-content: space-between;
+    width: auto;
+    flex: 1 1 auto;
+    order: 2;
+    min-width: 50%;
+    background-color: #404552;
+    min-height: 100vh;
 }
 
 #content-right {
-    position: fixed;
-    overflow: auto;
-    top: 0;
-    bottom: 0;
-    left: 250px;
-    right: 0;
+    padding-left: 1em;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 14em;
+    flex: 0 0 14em;
+    order: 3;
 }
 
 #wiki-title {
@@ -34,27 +77,45 @@ a {
     padding: 1rem 2rem;
 }
 
-#wiki-links > ul {
+#wiki-links div {
+    background-color: #404552;
+    margin: 1em;
+}
+
+#wiki-links ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#wiki-links > ul > li {
+#wiki-links ul li {
     font-size: 1.5rem;
     padding: .5rem;
 }
 
-#wiki-links > ul > li:hover {
+#wiki-links ul li:hover {
     background-color: #4b5162;
     cursor: pointer;
 }
 
-#snack-title {
-    font-size: 3rem;
+#snack-container {
     padding: 1rem 2rem;
 }
 
+#snack-title {
+    font-size: 3rem;
+    padding-top: 1.5rem;
+    border-bottom: solid 2px #5294e2;
+}
+
 #snack-content {
-    padding: 0 2rem;
+    padding-top: 1rem;
+}
+
+#snack-content-edit {
+    width: 100%;
+    min-height: 500px;
+    box-sizing: border-box;
+    background-color: #383c4a;
+    color: #fff;
 }
