@@ -1,0 +1,60 @@
+body {
+    background-color: #383c4a;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: #5294e2;
+}
+
+#content-left {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 249px;
+    border-right: 1px solid #7c818c;
+}
+
+#content-right {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 250px;
+    right: 0;
+}
+
+#wiki-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+#wiki-links > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#wiki-links > ul > li {
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+#wiki-links > ul > li:hover {
+    background-color: #4b5162;
+    cursor: pointer;
+}
+
+#snack-title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+}
+
+#snack-content {
+    padding: 0 2rem;
+}
